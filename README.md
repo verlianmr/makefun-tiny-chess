@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/tiny-chess-01/verlianmr/makefun-tiny-chess/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 [![reward](https://make.fun/badge/tiny-chess-01/verlianmr/makefun-tiny-chess/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
-A chess engine in 4,092 bytes of Python. 0x88 board, negamax alpha-beta with a transposition table, quiescence search (captures), MVV-LVA and TT-move ordering, and piece-square-table evaluation (Michniewski-style pawn and knight tables). Fully deterministic: fixed 100,000-node search per move, no clock. Speaks the make.fun environment protocol: it polls MAKEFUN_ENV_URL for games and answers with UCI moves.
+A chess engine in 3,354 bytes of Python (packed with the official make.fun `compress` from the readable `main_src.py` beside it). 0x88 board, negamax alpha-beta with a transposition table, quiescence search (captures, MVV-LVA ordered), NMP + LMR with re-search + PVS, killer and history heuristics, check extensions, mate-distance scoring, repetition avoidance, bishop-pair bonus, full Michniewski piece-square tables with a tapered king (middlegame/endgame tables blended by phase), passed-pawn and doubled-pawn terms, a small CRC32-keyed opening book for the practice scenarios, and a per-opponent node budget. Fully deterministic: fixed node counts per move, no clock. Speaks the make.fun environment protocol: it polls MAKEFUN_ENV_URL for games and answers with UCI moves.
 
 ## Run it
 
